@@ -80,10 +80,10 @@ write_xlsx(mydat, "mydat_geocodes_resurbis_20180713.xlsx")
 write.table(mydat, file = "mydat_geocodes_resurbis_20180713.txt")
 #Combine data
 #===============================================================================
-
-geo_cities=read.table("C:/Users/vine/OneDrive - Danmarks Tekniske Universitet/Biowaste/Geodata/mydat_geocodes_resurbis_20180713.txt")
+xx=source
+geo_cities=read.table("mydat_geocodes_resurbis_20180713.txt")
 library(readxl)
-Key_factors <- read_excel("C:/Users/vine/OneDrive - Danmarks Tekniske Universitet/Biowaste/Data_all_map/Key_factors.xlsx")
+Key_factors <- read_excel("Key_factors.xlsx")
 #+++++
 Key_factors%>%head()
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
