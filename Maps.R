@@ -67,14 +67,14 @@ mydat <- read.csv(textConnection("
 geocodes <- geocode(as.character(mydat$cities))
 
 #Save geocodes 
-setwd("C:/Users/vine/OneDrive - Danmarks Tekniske Universitet/Biowaste/Geodata")  
+
 library(writexl)
 write_xlsx(geocodes, "geocodes_resurbis_20180713.xlsx")
 write.table(geocodes, file = "geocodes_resurbis_20180713.txt")
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 mydat <- data.frame(mydat[,1:2],geocodes)
 ###Save this dataset
-setwd("C:/Users/vine/OneDrive - Danmarks Tekniske Universitet/Biowaste/Geodata")  
+
 library(writexl)
 write_xlsx(mydat, "mydat_geocodes_resurbis_20180713.xlsx")
 write.table(mydat, file = "mydat_geocodes_resurbis_20180713.txt")
